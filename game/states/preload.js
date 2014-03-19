@@ -18,8 +18,8 @@
 			this.load.image('background', 'assets/background.png');
 			this.load.image('ground', 'assets/ground.png');
 			this.load.spritesheet('horse', 'assets/horse.png',107,72,4);
+			this.load.spritesheet('sparkles', 'assets/sparkles.png',122,19,40);
 			this.load.tilemap('map', 'assets/maps/map.json', null, Phaser.Tilemap.TILED_JSON);
-			this.load.image('tiles', 'assets/tiles2.png');
 			this.load.image('police', 'assets/police-car.png');
 			this.load.physics('physicsData', 'assets/physics/cop-poly.json');
 
