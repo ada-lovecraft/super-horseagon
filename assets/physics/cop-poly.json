@@ -1,0 +1,17 @@
+	{ 
+		
+		"police-car": [
+			
+				{
+					"density": 2, "friction": 0, "bounce": 0, 
+					"filter": { "categoryBits": 1, "maskBits": 65535 },
+					"shape": [   19.5, 83  ,  91, -0.5  ,  132, -0.5  ,  172.5, 82  ,  134.5, 120  ,  64, 130.5  ,  16, 121.5  ]
+				}  ,
+				{
+					"density": 2, "friction": 0, "bounce": 0, 
+					"filter": { "categoryBits": 1, "maskBits": 65535 },
+					"shape": [   172.5, 82  ,  132, -0.5  ,  181, 28.5  ,  188.5, 52  ]
+				}  
+		]
+		
+	}
