@@ -134,6 +134,8 @@
               a.velocity.y = -1000;
               a.sprite.alive = false;
               a.sprite.rotationSpeed = game.rnd.integerInRange(2,5);
+              player.x = 300;
+              player.y = 400;
               game.add.tween(a.sprite).to({rotation: 6}, 1000, Phaser.Easing.Linear.NONE, true);
             } else {
               this.die();  
@@ -285,7 +287,8 @@
           cop.checkWorldBounds = true;
           policeGroup.add(cop);
         }
-        cop.x = game.width;
+        cop.reset(game.width, 450);
+        cop.body.angle = 0;
         cop.revive();
         cop.body.moveLeft(config.copSpeed);
         copTimer = game.time.now + game.rnd.integerInRange(config.minCopFrequency, config.maxCopFrequency);
@@ -320,7 +323,6 @@
       player.body.immovable = config.playerImmovable;
     },
     die: function() {
-      /*
       if (player.alive) {
         ground.autoScroll(0,0);
         game.add.tween(background).to({y:game.height}, 2000, Phaser.Easing.Linear.NONE,true);
@@ -347,43 +349,8 @@
         game.add.tween(player).to({angle: 180}, 3000, Phaser.Easing.Linear.NONE, true);
 
       }
-      */
     }
   };
     MenuState = Menu;
 })();
-      /*
       
-      ground.body.bounce = 0;
-      ground.body.immovable = true;
-      
-
-      
-      
-      
-
-      player.body.bounce = 0;
-      player.body.collideWorldBounds = true;
-
-      
-
-      
-      enemyGroup.callAll('setSize','')
-
-
-
-      
-      
-    },
-    
-    generateCop: function() {
-      var cop = enemyGroup.getFirstExists(false);
-      cop.reset(game.width,436);
-      cop.revive();
-      cop.body.velocity = new Phaser.Point(-300,0);
-      
-      copTimer = game.time.now + game.rnd.integerInRange(750, 5000);
-    }
-  };
-}());
-*/
