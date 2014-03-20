@@ -17,11 +17,21 @@
 			this.load.setPreloadSprite(this.asset);
 			this.load.image('background', 'assets/background.png');
 			this.load.image('ground', 'assets/ground.png');
-			this.load.spritesheet('horse', 'assets/horse.png',107,72,4);
+			this.load.spritesheet('horse', 'assets/horse.png',107,72,8);
+			this.load.spritesheet('pegasus', 'assets/pegasus.png',64,73,9);
+			this.load.spritesheet('rainbow-horse', 'assets/rainbow-horse.png',106,72,4);
 			this.load.spritesheet('sparkles', 'assets/sparkles.png',122,19,40);
+			this.load.spritesheet('fruits', 'assets/fruits.png',110,123,16);
 			this.load.tilemap('map', 'assets/maps/map.json', null, Phaser.Tilemap.TILED_JSON);
 			this.load.image('police', 'assets/police-car.png');
 			this.load.physics('physicsData', 'assets/physics/cop-poly.json');
+			this.load.script('filterX', 'filters/BlurX.js');
+			this.load.script('filter', 'filters/Fire.js');
+			this.load.audio('introMusic', 'assets/music/intro.wav');
+			this.load.audio('gameMusic', 'assets/music/game.wav');
+			this.load.audio('superMusic', 'assets/music/super.wav');
+			this.load.audio('endMusic', 'assets/music/end.wav');
+
 
 			/*
 
